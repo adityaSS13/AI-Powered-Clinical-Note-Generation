@@ -1,11 +1,13 @@
 # AI-Powered-Clinical-Note-Generation
-This project focuses on processing a transcript of a patient-doctor interaction (or a long, transcribed diagnostic report) and transforming it into a standardized clinical note format, following the SOAP structure.  
+This project implements a full-stack AI pipeline to automatically transform raw patient-physician interaction audio/transcripts into structured, compliant clinical SOAP notes, significantly reducing physician documentation time.   
 For converting audio to text (transcribing audio), OpenAI's open source Speech Recognition model 'Whisper' (whisper-medium.en) has been used (along with Huggingface pipelines API). Also, the use of closed source 'gpt-4o-mini-transcribe' model has been shown (OpenAI API key needs to be purchased and included in the .env file, or added to Google Colab's 'secrets' field).  
 
-Steps:  
-- Download any sample mp3 file of a conversation between between a doctor and a patient (Kaggle or any other source)
-- Create a Huggingface token and add it to .env file/Google colab secrets (key-value pair). The key name should be 'HF_TOKEN'
-- For using the Llama 3.1 model, navigate to this webpage and agree with all the necessary terms and conditions: https://www.google.com/url?q=https%3A%2F%2Fhuggingface.co%2Fmeta-llama%2FMeta-Llama-3.1-8B
+Setup and Prerequisites:  
+- Environment Setup: Clone the repository and install dependencies (pip install -r requirements.txt).
+- Audio Data: Download a sample doctor-patient interaction audio file (e.g., from Kaggle or the PriMock57 dataset).
+- Hugging Face Access: Create an account and generate an HF_TOKEN. Add this key to your .env file or Google Colab secrets.
+- Llama 3.1 Access: Navigate to the model page (https://www.google.com/url?q=https%3A%2F%2Fhuggingface.co%2Fmeta-llama%2FMeta-Llama-3.1-8B) and agree to the terms and conditions to gain access to the weights.
+- OpenAI API (Optional): If testing the gpt-4o-mini-transcribe model, purchase an API key and add it as OPENAI_API_KEY.
 
 Key features:
 1. Audio Transcription: Supports transcription via the Hugging Face Pipeline (using the openai/whisper-medium.en model) and the OpenAI API (gpt-4o-mini-transcribe).
