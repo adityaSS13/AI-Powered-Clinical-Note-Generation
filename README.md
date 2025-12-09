@@ -1,2 +1,3 @@
 # AI-Powered-Clinical-Note-Generation
-A tool that processes a transcript of a patient-doctor interaction (or a long, transcribed diagnostic report) and transforms it into a standardized clinical note format (using open and closed source LLMs)
+This project focuses on processing a transcript of a patient-doctor interaction (or a long, transcribed diagnostic report) and transforming it into a standardized clinical note format, following the SOAP structure.
+
